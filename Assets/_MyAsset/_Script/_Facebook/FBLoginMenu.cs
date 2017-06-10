@@ -63,27 +63,27 @@ public class FBLoginMenu : MonoBehaviour {
 	public void DealWithFBMenus(bool isLoggedIn){
 		if (isLoggedIn) {
 			//FB.API ("/me?fields=email" , HttpMethod.GET, DisplayEmail);
-			FB.API ("/me?fields=email,name,gender,id" , HttpMethod.GET, DisplayInfo);
+			FB.API ("/me?fields=email,first_name,last_name,name,gender,id" , HttpMethod.GET, DisplayInfo);
 //			FB.API ("/me/picture?type=square&height=128&width=128", HttpMethod.GET, DisplayProfile);
 //			FB.API ("/me?fields=user_hometown" , HttpMethod.GET, Displayhometown);
 
-			Application.LoadLevel ("Scene3");	
+			Application.LoadLevel ("Scene2_FBRegistration");	
 
 		} 
 	}
 
 	private void DisplayInfo(IResult result){
 		if (result.Error == null) {
-			FBGlobalVar.FBUserID = result.ResultDictionary ["id"]+"";
-			FBGlobalVar.FBName = result.ResultDictionary ["name"]+"";
-			FBGlobalVar.FBGender = result.ResultDictionary ["gender"]+"";
-			FBGlobalVar.FBEmailAddress = result.ResultDictionary ["email"]+"";
+			GlobalVariable.FACEBOOK_ID = result.ResultDictionary ["id"]+"";
+			GlobalVariable.FIRST_NAME = result.ResultDictionary ["first_name"]+"";
+			GlobalVariable.LAST_NAME = result.ResultDictionary ["last_name"]+"";
+			GlobalVariable.EMAIL = result.ResultDictionary ["email"]+"";
 
 
-			PlayerPrefs.SetString("UserID", FBGlobalVar.FBUserID);
-			PlayerPrefs.SetString("Name", FBGlobalVar.FBName);
-			PlayerPrefs.SetString("Gender", FBGlobalVar.FBGender);
-			PlayerPrefs.SetString("Email_Address", FBGlobalVar.FBEmailAddress);
+			PlayerPrefs.SetString("FACEBOOK_ID", GlobalVariable.FACEBOOK_ID);
+			PlayerPrefs.SetString("FIRST_NAME", GlobalVariable.FIRST_NAME);
+			PlayerPrefs.SetString("LAST_NAME", GlobalVariable.LAST_NAME);
+			PlayerPrefs.SetString("EMAIL", GlobalVariable.EMAIL);
 
 
 			print ("Hellow WORLD "+ result.RawResult);

@@ -59,11 +59,28 @@
      <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
      <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\MainMenu.cs" />
      <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
+     <Compile Include="Assets\Others\CalendarPlugin\CalendarController.cs" />
+     <Compile Include="Assets\Others\CalendarPlugin\CalendarDateItem.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_LoadingEffect.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_Login.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_LoginManager.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_PostInfoExample.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_Ranking.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_Register.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_SaveInfo.cs" />
+     <Compile Include="Assets\ULogin System\Script\bl_TopUserInfo.cs" />
      <Compile Include="Assets\_MyAsset\_Script\ChangeSceneAfterClick.cs" />
+     <Compile Include="Assets\_MyAsset\_Script\Signup.cs" />
      <Compile Include="Assets\_MyAsset\_Script\TimeDelayThenChange.cs" />
      <Compile Include="Assets\_MyAsset\_Script\_Facebook\FBGlobalVar.cs" />
      <Compile Include="Assets\_MyAsset\_Script\_Facebook\FBLoginMenu.cs" />
+     <Compile Include="Assets\_MyAsset\_Script\_GlobalMenu\GlobalMenu.cs" />
+     <Compile Include="Assets\_MyAsset\_Script\_GlobalMenu\GlobalMenuEnableDisable.cs" />
+     <Compile Include="Assets\_MyAsset\_Script\_UnityPhp\GlobalVariable.cs" />
+     <Compile Include="Assets\_MyAsset\_Script\_UnityPhp\RegisterPhp.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\_MyAsset\_ServerSide\php\crossdomain.xml" />
+     <None Include="Assets\ULogin System\PHP\crossdomain.xml" />
      <None Include="Assets\FacebookSDK\link.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -101,6 +118,10 @@
  <Reference Include="UnityEditor.iOS.Extensions.Common">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{533D72D8-0A08-56CC-9727-674044B0CA63}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
